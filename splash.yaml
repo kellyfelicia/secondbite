@@ -1,13 +1,13 @@
 flutter_native_splash:
-  color: "#FEFAE0"
-  color_dark: "#AC4425"
-  image: assets\logos\logo-light-mode.png
-  image_dark: assets\logos\logo-dark-mode.png
+  color: "#AC4425"
+  color_dark: "#352F44"
+  image: assets\logos\logo-dark-mode.png
+  image_dark: assets\logos\logo-light-mode.png
 
   android_12:
-    color: "#FEFAE0"
-    color_dark: "#AC4425"
-    image: assets\logos\logo-light-mode.png
-    image_dark: assets\logos\logo-dark-mode.png
+    color: "#AC4425"
+    color_dark: "#352F44"
+    image: assets\logos\logo-dark-mode.png
+    image_dark: assets\logos\logo-light-mode.png
 
   web: false
