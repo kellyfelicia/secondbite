@@ -45,11 +45,11 @@ class TextFormFields {
         const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(color: Colors.grey, width: 1.0),
+      borderSide: BorderSide(color: Colors.white, width: 1.0),
     ),
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(color: Colors.grey, width: 1.0),
+      borderSide: BorderSide(color: Colors.white, width: 1.0),
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),

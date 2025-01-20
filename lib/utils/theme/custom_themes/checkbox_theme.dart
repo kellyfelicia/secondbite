@@ -23,13 +23,13 @@ class CheckboxCustomTheme {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
     checkColor: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
-        return Colors.white;
+        return Color(0xFFAC4425);
       }
       return Colors.black;
     }),
     fillColor: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
-        return Color(0xFFAC4425);
+        return Colors.white;
       }
       return Colors.transparent;
     }),

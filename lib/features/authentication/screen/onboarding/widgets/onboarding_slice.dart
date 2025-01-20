@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
-import 'package:project_secondbite/utils/constants/sizes.dart';
 
 class OnboardingSlice extends StatelessWidget {
   const OnboardingSlice(
