@@ -4,6 +4,7 @@ import 'package:project_secondbite/features/authentication/screen/login/widgets/
 import 'package:project_secondbite/features/authentication/screen/login/widgets/login_header.dart';
 import 'package:project_secondbite/features/authentication/screen/login/widgets/social_auth.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
+import 'package:project_secondbite/utils/constants/texts.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -25,7 +26,7 @@ class LoginPage extends StatelessWidget {
                 height: AppSizes.spaceBtwSections,
               ),
               //divider
-              DividerForm(),
+              DividerWidget(text: TextString.orSignWith),
               const SizedBox(
                 height: AppSizes.spaceBtwSections,
               ),

@@ -1,40 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
-import 'package:project_secondbite/utils/constants/texts.dart';
+import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
-class DividerForm extends StatelessWidget {
-  const DividerForm({
+class DividerWidget extends StatelessWidget {
+  const DividerWidget({
     super.key,
+    required this.text,
   });
-
+  final String text;
   @override
   Widget build(BuildContext context) {
+    final dark = AppHelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Flexible(
+        Flexible(
           child: Divider(
-            color: AppColors.grey,
-            thickness: 0.5,
+            color: dark ? AppColors.darkGrey : AppColors.grey,
+            thickness: .5,
             indent: 60,
             endIndent: 5,
           ),
         ),
         Text(
-          TextString.orSignWith,
-          style: Theme.of(context)
-              .textTheme
-              .labelMedium
-              ?.copyWith(color: Colors.grey),
+          text,
+          style: Theme.of(context).textTheme.labelMedium,
         ),
-        const Flexible(
+        Flexible(
           child: Divider(
-            color: AppColors.grey,
-            thickness: 0.5,
+            color: dark ? AppColors.darkGrey : AppColors.grey,
+            thickness: .5,
             indent: 5,
             endIndent: 60,
           ),
-        )
+        ),
       ],
     );
   }

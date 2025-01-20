@@ -43,6 +43,17 @@ class TextString {
   static const String andText = "and";
   static const String termsOfServiceText = " Terms";
 
+  static const String orSignUpWith = "Or sign up with";
+
+  static const String emailVerificationTitle = "Verify your Email Address!";
+  static const String emailVerificationSubTitle =
+      "We've sent a verification link to your email. Please check your inbox and click on the link to verify your account.";
+  static const String resendEmailText = "Resend Email";
+
+  static const String accountCreatedTitle =
+      "Your account successfully created!";
+  static const String accountCreatedSubTitle =
+      "Your account has been created successfully. You can now log in and explore the foods on our app!";
   static const String verificationCodeText = "Verification Code";
   static const String resendCodeText = "Resend Code";
   static const String resendCodeInText = "Resend code in";
