@@ -67,4 +67,8 @@ class TextString {
   static const String verificationCodeText = "Verification Code";
   static const String resendCodeText = "Resend Code";
   static const String resendCodeInText = "Resend code in";
+
+  //home
+  static const String homeAppBartitle = "Good day to order food";
+  static const String homeAppBarSubtitle = "Kelly Felicia";
 }

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:project_secondbite/features/core/home/home.dart';
+import 'package:project_secondbite/features/core/screens/home/home.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
@@ -25,15 +25,16 @@ class NavigationMenu extends StatelessWidget {
               selectedIndex: controller.selectedIndex.value,
               onDestinationSelected: (index) =>
                   controller.selectedIndex.value = index,
-              backgroundColor: dark ? AppColors.black : AppColors.primaryColor,
+              backgroundColor:
+                  dark ? AppColors.primaryColor : AppColors.primaryColor,
               indicatorColor: Colors.transparent,
               destinations: [
                 _buildNavigationDestination(
-                    context, controller, 0, Iconsax.receipt),
-                _buildNavigationDestination(
                     context, controller, 1, Iconsax.home),
                 _buildNavigationDestination(
-                    context, controller, 2, Iconsax.bag),
+                    context, controller, 0, Iconsax.receipt),
+                _buildNavigationDestination(
+                    context, controller, 2, Iconsax.heart),
                 _buildNavigationDestination(
                     context, controller, 3, Iconsax.user),
               ],
@@ -67,9 +68,9 @@ class NavigationMenu extends StatelessWidget {
       final selectedIndex = controller.selectedIndex.value;
 
       final icon = [
-        Iconsax.receipt,
         Iconsax.home,
-        Iconsax.bag,
+        Iconsax.receipt,
+        Iconsax.heart,
         Iconsax.user,
       ][selectedIndex];
 
@@ -103,8 +104,8 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    Container(color: Colors.green),
     const HomePage(),
+    Container(color: Colors.green),
     Container(color: Colors.blue),
     Container(color: Colors.purple)
   ];

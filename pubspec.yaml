@@ -78,6 +78,13 @@ flutter:
     - assets/images/onboarding-3.png
     - assets/logos/google-logo.png
     - assets/logos/facebook-logo.png
+    - assets/images/pattern-food-1.png
+    - assets/images/pattern-food-header.png
+    - assets/images/beverages-cat.png
+    - assets/images/rice-cat.png
+    - assets/images/snacks-cat.png
+    - assets/images/noodles-cat.png
+    - assets/images/salad-cat.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

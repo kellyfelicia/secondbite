@@ -11,4 +11,10 @@ class IconImages {
 
   static const String backgroundImage = 'assets/images/pattern-food.png';
 
+  //cat
+  static const String beveragesCat = 'assets/images/beverages-cat.png';
+  static const String riceCat = 'assets/images/rice-cat.png';
+  static const String snacksCat = 'assets/images/snacks-cat.png';
+  static const String noodlesCat = 'assets/images/noodles-cat.png';
+  static const String saladCat = 'assets/images/salad-cat.png';
 }
