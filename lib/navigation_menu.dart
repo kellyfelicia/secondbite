@@ -1,0 +1,111 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:project_secondbite/features/core/home/home.dart';
+import 'package:project_secondbite/utils/constants/colors.dart';
+import 'package:project_secondbite/utils/helpers/helper_functions.dart';
+
+class NavigationMenu extends StatelessWidget {
+  const NavigationMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(NavigationController());
+    final dark = AppHelperFunctions.isDarkMode(context);
+
+    return Scaffold(
+      bottomNavigationBar: Obx(
+        () => Stack(
+          clipBehavior: Clip.none,
+          children: [
+            NavigationBar(
+              height: 70,
+              elevation: 0,
+              selectedIndex: controller.selectedIndex.value,
+              onDestinationSelected: (index) =>
+                  controller.selectedIndex.value = index,
+              backgroundColor: dark ? AppColors.black : AppColors.primaryColor,
+              indicatorColor: Colors.transparent,
+              destinations: [
+                _buildNavigationDestination(
+                    context, controller, 0, Iconsax.receipt),
+                _buildNavigationDestination(
+                    context, controller, 1, Iconsax.home),
+                _buildNavigationDestination(
+                    context, controller, 2, Iconsax.bag),
+                _buildNavigationDestination(
+                    context, controller, 3, Iconsax.user),
+              ],
+            ),
+            _buildPopOutIcon(controller),
+          ],
+        ),
+      ),
+      body: Obx(() => controller.screens[controller.selectedIndex.value]),
+    );
+  }
+
+  Widget _buildNavigationDestination(BuildContext context,
+      NavigationController controller, int index, IconData icon) {
+    final isSelected = controller.selectedIndex.value == index;
+    return NavigationDestination(
+      icon: Padding(
+        padding: EdgeInsets.only(top: 20),
+        child: Icon(
+          icon,
+          size: isSelected ? 22 : 25,
+          color: Colors.white,
+        ),
+      ),
+      label: '',
+    );
+  }
+
+  Widget _buildPopOutIcon(NavigationController controller) {
+    return Obx(() {
+      final selectedIndex = controller.selectedIndex.value;
+
+      final icon = [
+        Iconsax.receipt,
+        Iconsax.home,
+        Iconsax.bag,
+        Iconsax.user,
+      ][selectedIndex];
+
+      return AnimatedPositioned(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeOut,
+        bottom: 20,
+        left: (selectedIndex * 100.0) + 30,
+        child: Container(
+          height: 60,
+          width: 60,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.3),
+                blurRadius: 15,
+                offset: const Offset(0, 8),
+              ),
+            ],
+          ),
+          child: Icon(icon, color: Colors.white, size: 25),
+        ),
+      );
+    });
+  }
+}
+
+class NavigationController extends GetxController {
+  final Rx<int> selectedIndex = 0.obs;
+
+  final screens = [
+    Container(color: Colors.green),
+    const HomePage(),
+    Container(color: Colors.blue),
+    Container(color: Colors.purple)
+  ];
+}

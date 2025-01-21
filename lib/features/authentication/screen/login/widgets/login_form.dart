@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:project_secondbite/features/authentication/screen/pass_config/forget_pass.dart';
 import 'package:project_secondbite/features/authentication/screen/register/register_page.dart';
+import 'package:project_secondbite/navigation_menu.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
 import 'package:project_secondbite/utils/constants/texts.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
@@ -57,7 +58,7 @@ class LoginForm extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const NavigationMenu()),
                   child: const Text(TextString.loginButtonText),
                 ),
               ),

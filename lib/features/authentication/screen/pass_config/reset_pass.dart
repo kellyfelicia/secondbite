@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:project_secondbite/features/authentication/screen/login/login_page.dart';
 import 'package:project_secondbite/features/authentication/screen/register/widgets/success_verified.dart';
 import 'package:project_secondbite/utils/constants/images_icon.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
@@ -49,7 +50,7 @@ class ResetPassPage extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const LoginPage()),
                 child: const Text(TextString.doneText),
               ),
             ),
