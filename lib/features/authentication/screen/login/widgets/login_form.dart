@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:project_secondbite/features/authentication/screen/pass_config/forget_pass.dart';
 import 'package:project_secondbite/features/authentication/screen/register/register_page.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
 import 'package:project_secondbite/utils/constants/texts.dart';
@@ -46,7 +47,7 @@ class LoginForm extends StatelessWidget {
                     ],
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const ForgetPass()),
                     child: Text(TextString.forgotPasswordText,
                         style: TextStyle(fontSize: 14)),
                   ),

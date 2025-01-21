@@ -64,6 +64,7 @@ class VerifyEmail extends StatelessWidget {
                         title: TextString.accountCreatedTitle,
                         subtitle: TextString.accountCreatedSubTitle,
                         onPressed: () => Get.to(() => const LoginPage()),
+                        text: TextString.continueText,
                       )),
                   child: const Text(TextString.continueText),
                 ),

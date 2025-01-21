@@ -6,16 +6,16 @@ import 'package:project_secondbite/utils/constants/texts.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
 class SuccessVerified extends StatelessWidget {
-  final String image, title, subtitle;
+  final String image, title, subtitle, text;
   final VoidCallback onPressed;
 
-  const SuccessVerified({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.subtitle,
-    required this.onPressed,
-  });
+  const SuccessVerified(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.subtitle,
+      required this.onPressed,
+      required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class SuccessVerified extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: onPressed,
-                    child: const Text(TextString.continueText),
+                    child: Text(text),
                   ),
                 ),
               ],

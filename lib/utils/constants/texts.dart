@@ -54,6 +54,16 @@ class TextString {
       "Your account successfully created!";
   static const String accountCreatedSubTitle =
       "Your account has been created successfully. You can now log in and explore the foods on our app!";
+
+  static const String forgetPassTitle = "Forget Password";
+  static const String forgetPassSubTitle =
+      "Enter your registered email address to reset your password.";
+  static const String submitText = "Submit";
+
+  static const String passResetTitle = "Password Reset Email Sent";
+  static const String passResetSubTitle =
+      "Please check your email for a link to reset your password. If you don't receive the email, you can resend email.";
+  static const String doneText = "Done";
   static const String verificationCodeText = "Verification Code";
   static const String resendCodeText = "Resend Code";
   static const String resendCodeInText = "Resend code in";
