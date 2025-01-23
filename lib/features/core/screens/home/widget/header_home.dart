@@ -24,13 +24,12 @@ class HeaderHome extends StatelessWidget {
       child: Stack(
         children: [
           Positioned.fill(
-            // Adjust the scaling factor to make the pattern bigger
             child: Opacity(
               opacity: 0.1,
               child: Image.asset(
                 'assets/images/pattern-food-header.png',
                 fit:
-                    BoxFit.cover, // Ensure the image still covers the container
+                    BoxFit.cover, 
               ),
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:project_secondbite/utils/theme/custom_themes/bottom_sheet.dart';
 import 'package:project_secondbite/utils/theme/custom_themes/checkbox_theme.dart';
@@ -9,8 +10,6 @@ import 'package:project_secondbite/utils/theme/custom_themes/text_theme.dart';
 import 'package:project_secondbite/utils/theme/custom_themes/text_field.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const Colours = Color(0xFFAC4425);
-
 class ThemeApp {
   ThemeApp._();
 
@@ -18,8 +17,8 @@ class ThemeApp {
     useMaterial3: true,
     fontFamily: GoogleFonts.poppins().fontFamily,
     brightness: Brightness.light,
-    primaryColor: Colours,
-    scaffoldBackgroundColor: Colors.white,
+    primaryColor: AppColors.primaryColor,
+    scaffoldBackgroundColor: AppColors.white,
     appBarTheme: AppBarCustomTheme.lightAppBarTheme,
     chipTheme: ChipThemes.lightChipTheme,
     textTheme: TextThemes.lightTextTheme,
@@ -34,8 +33,8 @@ class ThemeApp {
     useMaterial3: true,
     fontFamily: GoogleFonts.poppins().fontFamily,
     brightness: Brightness.dark,
-    primaryColor: Colors.black,
-    scaffoldBackgroundColor: Colors.black,
+    primaryColor: AppColors.black,
+    scaffoldBackgroundColor: AppColors.black,
     appBarTheme: AppBarCustomTheme.darkAppBarTheme,
     chipTheme: ChipThemes.darkChipTheme,
     textTheme: TextThemes.darkTextTheme,

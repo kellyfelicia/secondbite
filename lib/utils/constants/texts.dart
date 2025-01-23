@@ -71,4 +71,6 @@ class TextString {
   //home
   static const String homeAppBartitle = "Good day to order food";
   static const String homeAppBarSubtitle = "Kelly Felicia";
+
+  
 }

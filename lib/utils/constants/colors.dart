@@ -10,6 +10,7 @@ class AppColors {
   static const Color lightMode = Color(0xFFAC4425);
 
   static const Color black = Color(0xFF232323);
+  static const Color lightBlack = Color.fromARGB(255, 63, 63, 63);
   static const Color darkerGrey = Color(0xFF4F4F4F);
   static const Color darkGrey = Color(0xFF939393);
   static const Color grey = Color(0xFFE0E0E0);
