@@ -10,9 +10,7 @@ class ElevatedButtonCustomTheme {
       backgroundColor: Color(0xFFAC4425),
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
-      side: const BorderSide(
-        color: Color(0xFFAC4425),
-      ),
+      side: BorderSide.none,
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: const TextStyle(
           fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
@@ -29,9 +27,7 @@ class ElevatedButtonCustomTheme {
       backgroundColor: Color(0XFFAC4425),
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
-      side: const BorderSide(
-        color: Color(0XFFAC4425),
-      ),
+      side: BorderSide.none,
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: const TextStyle(
           fontSize: 16, color: Color(0xFFAC4425), fontWeight: FontWeight.w600),

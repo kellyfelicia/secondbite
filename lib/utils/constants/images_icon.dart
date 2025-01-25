@@ -62,4 +62,9 @@ class IconImages {
   static const String productImage36 = 'assets/images_product/product(36).jpg';
   static const String productImage37 = 'assets/images_product/product(37).jpg';
   static const String productImage38 = 'assets/images_product/product(38).png';
+
+  static const String userImage = 'assets/images/sylus.png';
+
+  static const String payGopay = 'assets/logos/pay-gopay.png';
+  static const String successCheck = 'assets/images/success-check.png';
 }

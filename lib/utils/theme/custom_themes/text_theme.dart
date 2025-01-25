@@ -26,7 +26,7 @@ class TextThemes {
     labelLarge: const TextStyle().copyWith(
         fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black),
     labelMedium: const TextStyle().copyWith(
-        fontSize: 14, fontWeight: FontWeight.normal, color: AppColors.darkGrey),
+        fontSize: 14, fontWeight: FontWeight.bold, color: AppColors.black),
     labelSmall: const TextStyle().copyWith(
         fontSize: 12, fontWeight: FontWeight.normal, color: Colors.black),
   );

@@ -39,6 +39,8 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   flutter_native_splash: ^2.4.4
   carousel_slider: ^5.0.0
+  readmore: ^3.0.0
+  flutter_rating_bar: ^4.0.1
 
   #Icons
   iconsax: ^0.0.8
@@ -129,6 +131,11 @@ flutter:
     - assets/images_product/product(36).jpg
     - assets/images_product/product(37).jpg
     - assets/images_product/product(38).png
+    - assets/images/sylus.png
+
+    #logo
+    - assets/logos/pay-gopay.png
+    - assets/images/success-check.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

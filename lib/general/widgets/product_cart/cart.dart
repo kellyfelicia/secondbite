@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart ';
+import 'package:project_secondbite/features/core/screens/cart/cart_page.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 
 
 class CartView extends StatelessWidget {
-  const CartView({super.key, required this.onPressed, required this.iconColor});
+  const CartView({super.key, required this.iconColor});
 
   final Color? iconColor;
-  final VoidCallback onPressed;
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class CartView extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         IconButton(
-          onPressed: onPressed,
+          onPressed: () => Get.to(() => CartPage()),
           icon: Icon(Iconsax.bag, color: iconColor),
         ),
         Positioned(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_secondbite/features/general/widgets/appbar/appbar.dart';
-import 'package:project_secondbite/features/general/widgets/product_cart/cart.dart';
+import 'package:project_secondbite/general/widgets/appbar/appbar.dart';
+import 'package:project_secondbite/general/widgets/product_cart/cart.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/constants/texts.dart';
 
@@ -32,9 +32,10 @@ class HomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        CartView(onPressed: (){}, iconColor: AppColors.white,),
+        CartView(
+          iconColor: AppColors.white,
+        ),
       ],
     );
   }
 }
-

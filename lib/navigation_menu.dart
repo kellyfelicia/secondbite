@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:project_secondbite/features/core/screens/activity_order/activity_order.dart';
 import 'package:project_secondbite/features/core/screens/home/home.dart';
+import 'package:project_secondbite/features/core/screens/profile/profile.dart';
+import 'package:project_secondbite/features/core/screens/wishlist/wishlist.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
@@ -105,8 +108,8 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomePage(),
-    Container(color: Colors.green),
-    Container(color: Colors.blue),
-    Container(color: Colors.purple)
+    const ActivityOrderPage(),
+    const WishlistPage(),
+    const ProfilePage(),
   ];
 }

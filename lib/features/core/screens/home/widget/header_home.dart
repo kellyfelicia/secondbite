@@ -5,15 +5,17 @@ class HeaderHome extends StatelessWidget {
   const HeaderHome({
     super.key,
     required this.child,
+    this.height = 220,
   });
 
   final Widget child;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 220,
+      height: height,
       decoration: const BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: BorderRadius.only(
@@ -28,8 +30,7 @@ class HeaderHome extends StatelessWidget {
               opacity: 0.1,
               child: Image.asset(
                 'assets/images/pattern-food-header.png',
-                fit:
-                    BoxFit.cover, 
+                fit: BoxFit.cover,
               ),
             ),
           ),
