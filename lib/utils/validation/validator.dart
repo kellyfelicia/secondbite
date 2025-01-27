@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
-
 class AppValidator {
-  static String? validateConfirmPassword(
-      String? value, TextEditingController passwordController) {
-    if (value != passwordController.text) {
-      return 'Passwords do not match';
+  /// Empty Text Validation
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is required.';
     }
+
     return null;
   }
 
@@ -58,10 +57,10 @@ class AppValidator {
     }
 
     // Regular expression for phone number validation (assuming a 10-digit US phone number format)
-    final phoneRegExp = RegExp(r'^\d{11}$');
+    final phoneRegExp = RegExp(r'^\d{10}$');
 
     if (!phoneRegExp.hasMatch(value)) {
-      return 'Invalid phone number format (11 digits required).';
+      return 'Invalid phone number format (10 digits required).';
     }
 
     return null;

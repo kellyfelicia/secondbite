@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
 import 'package:project_secondbite/utils/device/device_utility.dart';

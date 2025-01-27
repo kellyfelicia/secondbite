@@ -27,7 +27,7 @@ class PaymentBilling extends StatelessWidget {
               width: 60,
               height: 50,
               backgroundColor: dark ? AppColors.white : AppColors.white,
-              padding: EdgeInsets.all(AppSizes.sm),
+              padding: const EdgeInsets.all(AppSizes.sm),
               child: const Image(
                   image: AssetImage(IconImages.payGopay), fit: BoxFit.contain),
             ),

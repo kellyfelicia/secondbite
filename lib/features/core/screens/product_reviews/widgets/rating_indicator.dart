@@ -30,7 +30,7 @@ class RatingIndicator extends StatelessWidget {
               minHeight: 11,
               backgroundColor: AppColors.grey,
               borderRadius: BorderRadius.circular(7),
-              valueColor: AlwaysStoppedAnimation(AppColors.primaryColor),
+              valueColor: const AlwaysStoppedAnimation(AppColors.primaryColor),
             ),
           ),
         )

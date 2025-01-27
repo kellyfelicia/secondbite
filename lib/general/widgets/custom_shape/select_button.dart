@@ -7,11 +7,11 @@ class SelectableButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const SelectableButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.isSelected,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class SelectableButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(50), 
             side: BorderSide.none, 
           ),
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
               vertical: 10,
               horizontal: 20),
         ),

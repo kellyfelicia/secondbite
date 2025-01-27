@@ -9,25 +9,25 @@ class AddNewAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBars(
+      appBar: const AppBars(
         showBackArrow: true,
         title: Text('Add New Address'),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
           child: Form(
             child: Column(
               children: [
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.user), labelText: 'Name'),
                 ),
                 const SizedBox(
                   height: AppSizes.spaceBtwInputFields,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.call),
                       labelText: 'Phone Number'),
                 ),
@@ -38,31 +38,31 @@ class AddNewAddress extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.location),
                             labelText: 'Street'),
                       ),
                     ),
-                    SizedBox(width: AppSizes.spaceBtwInputFields),
+                    const SizedBox(width: AppSizes.spaceBtwInputFields),
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             prefixIcon: Icon(Iconsax.building),
                             labelText: 'City'),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: AppSizes.spaceBtwInputFields),
+                const SizedBox(height: AppSizes.spaceBtwInputFields),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.note),
                       labelText: 'Notes (e.g. In Front of Red Buildings)'),
                 ),
                 const SizedBox(height: AppSizes.spaceBtwSections),
                 SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(onPressed: () {}, child: Text('Save')),
+                  child: ElevatedButton(onPressed: () {}, child: const Text('Save')),
                 )
               ],
             ),

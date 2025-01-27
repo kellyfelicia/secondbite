@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:project_secondbite/data/repositories/authentication_repository.dart';
+import 'package:project_secondbite/features/authentication/controllers/register/verify_email_controller.dart';
 import 'package:project_secondbite/features/authentication/screen/login/login_page.dart';
 import 'package:project_secondbite/features/authentication/screen/register/widgets/success_verified.dart';
 import 'package:project_secondbite/utils/constants/images_icon.dart';
@@ -9,28 +11,31 @@ import 'package:project_secondbite/utils/constants/texts.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
 class VerifyEmail extends StatelessWidget {
-  const VerifyEmail({super.key});
+  const VerifyEmail({super.key, this.email});
+
+  final String? email;
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(VerifyEmailController());
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            onPressed: () => Get.offAll(() => const LoginPage()),
+            onPressed: () => AuthenticationRepository.instance.logout(),
             icon: const Icon(CupertinoIcons.clear),
           ),
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
           child: Column(
             children: [
               // Image
               Image(
-                image: AssetImage(IconImages.onboarding1),
+                image: const AssetImage(IconImages.onboarding1),
                 width: AppHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: AppSizes.spaceBtwItems),
@@ -43,7 +48,7 @@ class VerifyEmail extends StatelessWidget {
               const SizedBox(height: AppSizes.spaceBtwItems),
               // Email
               Text(
-                'test@gmail.com',
+                email ?? '',
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
@@ -59,13 +64,7 @@ class VerifyEmail extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => SuccessVerified(
-                        image: IconImages.onboarding1,
-                        title: TextString.accountCreatedTitle,
-                        subtitle: TextString.accountCreatedSubTitle,
-                        onPressed: () => Get.to(() => const LoginPage()),
-                        text: TextString.continueText,
-                      )),
+                  onPressed: () => controller.checkEmailVerificationStatus(),
                   child: const Text(TextString.continueText),
                 ),
               ),
@@ -74,7 +73,7 @@ class VerifyEmail extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => controller.sendEmailVerification,
                   child: const Text(TextString.resendEmailText),
                 ),
               ),

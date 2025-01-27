@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_secondbite/utils/constants/sizes.dart';
 
 class HeadingText extends StatelessWidget {
   const HeadingText(
@@ -29,7 +28,7 @@ class HeadingText extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis),
           if (showActionButton)
-            TextButton(onPressed: () {}, child: Text(buttonTitle))
+            TextButton(onPressed: onPressed, child: Text(buttonTitle))
         ],
       )
     ]);

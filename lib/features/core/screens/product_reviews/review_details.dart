@@ -12,27 +12,27 @@ class ReviewDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBars(
+      appBar: const AppBars(
         title: Text('Reviews & Ratings'),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              OverallProductRating(),
-              AppRatingBar(rating: 4.9),
+              const OverallProductRating(),
+              const AppRatingBar(rating: 4.9),
               Text('12,561', style: Theme.of(context).textTheme.bodySmall),
               const SizedBox(height: AppSizes.spaceBtwSections),
 
               //user review list
 
-              UserReviewCard(),
-              UserReviewCard(),
-              UserReviewCard(),
-              UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
             ],
           ),
         ),

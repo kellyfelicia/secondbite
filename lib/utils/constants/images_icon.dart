@@ -63,8 +63,19 @@ class IconImages {
   static const String productImage37 = 'assets/images_product/product(37).jpg';
   static const String productImage38 = 'assets/images_product/product(38).png';
 
-  static const String userImage = 'assets/images/sylus.png';
+  static const String userImage = 'assets/images/user-pp.png';
 
   static const String payGopay = 'assets/logos/pay-gopay.png';
   static const String successCheck = 'assets/images/success-check.png';
+
+  static const String loadingAnimation = 'assets/images/docer-animation.json';
+
+
+  // categories icon
+  static const String beverages = 'assets/logo_cat/soda.png';
+  static const String rice = 'assets/logo_cat/rice.png';
+  static const String snacks = 'assets/logo_cat/cake.png';
+  static const String noodles = 'assets/logo_cat/noodles.png';
+  static const String salad = 'assets/logo_cat/salad.png';
+  static const String seafood = 'assets/logo_cat/fish.png';
 }

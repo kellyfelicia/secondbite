@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "94550324733",
+    "project_id": "erudite-descent-448911-h5",
+    "storage_bucket": "erudite-descent-448911-h5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94550324733:android:87b169ea8231436a44d594",
+        "android_client_info": {
+          "package_name": "com.example.secondbiteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94550324733-lagucicn2rsskfrigsfnbg9t1o4ag4th.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.secondbiteapp",
+            "certificate_hash": "b904f0abef5c1b41c920a05f4648c8ad785e79fe"
+          }
+        },
+        {
+          "client_id": "94550324733-0kjdmvta0ju8una61mkjh3i84qbrisb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR-3f6e4Ijw6TYAb-uLBO9P9jY1OZ4D2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94550324733-0kjdmvta0ju8una61mkjh3i84qbrisb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

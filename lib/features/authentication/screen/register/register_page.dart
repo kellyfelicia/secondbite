@@ -16,7 +16,7 @@ class RegisterPage extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppSizes.appBarHeight),
+          padding: const EdgeInsets.all(AppSizes.appBarHeight),
           child: Column(
             children: [
               // Title
@@ -27,7 +27,7 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(height: AppSizes.spaceBtwSections),
 
               // Form
-              RegisterForm(),
+              const RegisterForm(),
               const SizedBox(height: AppSizes.spaceBtwSections),
 
               //divider

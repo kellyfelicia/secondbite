@@ -24,7 +24,7 @@ class SocialAuth extends StatelessWidget {
                   height: AppSizes.iconMd,
                   image: AssetImage(IconImages.googleIcon),
                 ))),
-        SizedBox(
+        const SizedBox(
           width: AppSizes.spaceBtwSections,
         ),
         Container(

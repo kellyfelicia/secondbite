@@ -12,7 +12,7 @@ class ServiceType extends StatelessWidget {
   final Color textColor;
 
   const ServiceType({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.subtitle,
@@ -20,7 +20,7 @@ class ServiceType extends StatelessWidget {
     this.backgroundColor = AppColors.primaryColor, // Default brown color
     this.buttonColor = Colors.black,
     this.textColor = Colors.white,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

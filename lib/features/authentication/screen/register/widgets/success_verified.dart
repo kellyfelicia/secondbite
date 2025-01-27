@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:project_secondbite/utils/constants/images_icon.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
-import 'package:project_secondbite/utils/constants/texts.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
 class SuccessVerified extends StatelessWidget {
@@ -23,7 +20,7 @@ class SuccessVerified extends StatelessWidget {
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(AppSizes.defaultSpace),
+            padding: const EdgeInsets.all(AppSizes.defaultSpace),
             child: Column(
               children: [
                 Image(

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:project_secondbite/data/repositories/authentication_repository.dart';
 import 'package:project_secondbite/features/core/screens/address/address.dart';
 import 'package:project_secondbite/features/core/screens/home/widget/header_home.dart';
 import 'package:project_secondbite/features/core/screens/profile/profile_details.dart';
 import 'package:project_secondbite/features/core/screens/profile/setting_menu.dart';
 import 'package:project_secondbite/features/core/screens/profile/widgets/profile_card.dart';
+import 'package:project_secondbite/features/personalization/controllers/user_controller.dart';
 import 'package:project_secondbite/general/widgets/appbar/appbar.dart';
 import 'package:project_secondbite/general/widgets/texts/heading_text.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
@@ -44,7 +46,7 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: AppSizes.spaceBtwSections),
             Padding(
-              padding: EdgeInsets.all(AppSizes.defaultSpace),
+              padding: const EdgeInsets.all(AppSizes.defaultSpace),
               child: Column(
                 children: [
                   const HeadingText(title: 'Account Settings'),
@@ -55,19 +57,34 @@ class ProfilePage extends StatelessWidget {
                     subtitle: 'Set your addresses for delivery',
                     OnTap: () => Get.to(() => const UserAddressPage()),
                   ),
-                  SettingMenu(
+                  const SettingMenu(
                     icon: Iconsax.discount_shape,
                     title: 'Promos',
                     subtitle: 'Promos and coupons',
                   ),
-                  SettingMenu(
+                  const SettingMenu(
                       icon: Iconsax.notification,
                       title: 'Notifications',
                       subtitle: 'Notification settings'),
-                  SettingMenu(
+                  const SettingMenu(
                       icon: Iconsax.security_card,
                       title: 'Account Privacy',
                       subtitle: 'Privacy settings'),
+                  const SettingMenu(
+                      icon: Iconsax.document_upload,
+                      title: 'Upload Image',
+                      subtitle: 'Upload your images here.',
+                    ),
+                  const SizedBox(height: AppSizes.spaceBtwSections,),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () async {
+                        await AuthenticationRepository.instance.logout();
+                      },
+                      child: const Text('Logout'),
+                    ),
+                  ),
                 ],
               ),
             )

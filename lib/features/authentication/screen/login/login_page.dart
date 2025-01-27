@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
             children: [
               //header
               LoginHeader(),
-              const SizedBox(height: AppSizes.spaceBtwSections),
+              SizedBox(height: AppSizes.spaceBtwSections),
               //form
               LoginForm(),
               SizedBox(
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
               ),
               //divider
               DividerWidget(text: TextString.orSignWith),
-              const SizedBox(
+              SizedBox(
                 height: AppSizes.spaceBtwSections,
               ),
               //footer

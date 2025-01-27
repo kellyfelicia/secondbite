@@ -17,14 +17,14 @@ class UserReviewCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundImage: AssetImage(IconImages.userImage),
                 ),
-                SizedBox(width: AppSizes.spaceBtwItems),
+                const SizedBox(width: AppSizes.spaceBtwItems),
                 Text('Sylus', style: Theme.of(context).textTheme.titleLarge),
               ],
             ),
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
+            IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
           ],
         ),
         const SizedBox(width: AppSizes.spaceBtwItems),
@@ -32,7 +32,7 @@ class UserReviewCard extends StatelessWidget {
         //review
         Row(
           children: [
-            AppRatingBar(rating: 4),
+            const AppRatingBar(rating: 4),
             const SizedBox(width: AppSizes.spaceBtwItems),
             Text(
               '24 Jan 2025',

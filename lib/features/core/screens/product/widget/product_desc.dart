@@ -10,10 +10,10 @@ class ProductDescriptionOrReviews extends StatelessWidget {
   final String text;
 
   const ProductDescriptionOrReviews({
-    Key? key,
+    super.key,
     required this.isDescriptionSelected,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

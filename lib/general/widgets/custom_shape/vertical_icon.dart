@@ -1,5 +1,4 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';

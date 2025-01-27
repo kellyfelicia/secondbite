@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 
 class SettingMenu extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_secondbite/general/widgets/custom_shape/card_vertical.dart';
+import 'package:project_secondbite/general/widgets/products/cards/card_vertical.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
 
 class GridViewLayout extends StatelessWidget {
@@ -20,10 +20,10 @@ class GridViewLayout extends StatelessWidget {
         itemCount: itemCount,
         shrinkWrap: true,
         padding: EdgeInsets.zero,
-        physics: NeverScrollableScrollPhysics(),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        physics: const NeverScrollableScrollPhysics(),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            mainAxisSpacing: AppSizes.gridViewSpacing,
+            mainAxisSpacing: 100,
             crossAxisSpacing: AppSizes.gridViewSpacing,
             mainAxisExtent: 288),
         itemBuilder: itemBuilder);

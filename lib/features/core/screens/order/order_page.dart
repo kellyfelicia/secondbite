@@ -33,7 +33,7 @@ class OrderPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
           child: Column(
             children: [
               ServiceType(
@@ -45,21 +45,21 @@ class OrderPage extends StatelessWidget {
               const SizedBox(
                 height: AppSizes.spaceBtwSections,
               ),
-              CouponCode(),
+              const CouponCode(),
               const SizedBox(height: AppSizes.spaceBtwSections),
               RoundedContainer(
-                padding: EdgeInsets.all(AppSizes.md),
+                padding: const EdgeInsets.all(AppSizes.md),
                 showBorder: true,
                 backgroundColor: dark ? AppColors.black : AppColors.white,
                 child: const Column(
                   children: [
                     //billing
                     BillingSection(),
-                    const SizedBox(height: AppSizes.spaceBtwItems),
+                    SizedBox(height: AppSizes.spaceBtwItems),
 
                     //divider
-                    const Divider(),
-                    const SizedBox(height: AppSizes.spaceBtwItems),
+                    Divider(),
+                    SizedBox(height: AppSizes.spaceBtwItems),
 
                     //payment method
                     PaymentBilling(),
@@ -71,7 +71,7 @@ class OrderPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
           child: ElevatedButton(
             onPressed: () => Get.to(() => SuccessVerified(
                 image: IconImages.successCheck,
@@ -79,7 +79,7 @@ class OrderPage extends StatelessWidget {
                 subtitle: 'Your order will be prepared by the seller soon!',
                 onPressed: () => Get.offAll(() => const NavigationMenu()),
                 text: 'Continue')),
-            child: Text('Order Now'),
+            child: const Text('Order Now'),
           )),
     );
   }

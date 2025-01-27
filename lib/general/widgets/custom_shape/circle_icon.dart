@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
 
@@ -24,23 +23,23 @@ class CircleIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      height: height,
+      width: width ?? 48.0,
+      height: height ?? 48.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: backgroundColor != null
-            ? backgroundColor!
-            : AppHelperFunctions.isDarkMode(context)
+        color: backgroundColor ??
+            (AppHelperFunctions.isDarkMode(context)
                 ? AppColors.black.withOpacity(0.9)
-                : AppColors.white.withOpacity(0.9),
+                : AppColors.white.withOpacity(0.9)),
       ),
       child: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            icon,
-            color: color,
-            size: size,
-          )),
+        onPressed: onPressed,
+        icon: Icon(
+          icon,
+          color: color ?? Theme.of(context).iconTheme.color,
+          size: size ?? 24.0,
+        ),
+      ),
     );
   }
 }

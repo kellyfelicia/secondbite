@@ -1,40 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:project_secondbite/features/core/controller/cart_controller.dart';
+import 'package:project_secondbite/features/core/controller/home_controller.dart';
+import 'package:project_secondbite/features/core/models/catalog_home_model.dart';
 import 'package:project_secondbite/features/core/screens/product/widget/product_desc.dart';
 import 'package:project_secondbite/general/widgets/appbar/appbar.dart';
 import 'package:project_secondbite/general/widgets/custom_shape/circle_icon.dart';
-import 'package:project_secondbite/general/widgets/custom_shape/rounded_container.dart';
 import 'package:project_secondbite/general/widgets/custom_shape/rounded_image.dart';
 import 'package:project_secondbite/general/widgets/custom_shape/select_button.dart';
-import 'package:project_secondbite/utils/constants/colors.dart';
-import 'package:project_secondbite/utils/constants/images_icon.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
 import 'package:project_secondbite/utils/helpers/helper_functions.dart';
-import 'package:readmore/readmore.dart';
 
 class ProductDetail extends StatefulWidget {
-  const ProductDetail({super.key});
+  final FoodMenuItem item;
+
+  const ProductDetail({super.key, required this.item});
 
   @override
   _ProductDetailState createState() => _ProductDetailState();
 }
 
 class _ProductDetailState extends State<ProductDetail> {
-  bool isDescriptionSelected = true; // Track which tab is selected
+  bool isDescriptionSelected = true;
 
   @override
   Widget build(BuildContext context) {
-    final dark = AppHelperFunctions.isDarkMode(context);
+    final homeController = Get.find<HomeController>();
+    final cartController = Get.find<CartController>();
+    final darkModeEnabled = AppHelperFunctions.isDarkMode(context);
+    final isWishlisted = homeController.isInWishlist(widget.item);
+
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Header with image and wishlist toggle
           Stack(
             children: [
-              // Product image
               RoundedImage(
-                imageUrl: IconImages.productImage1,
+                isNetworkImage: true,
+                imageUrl: widget.item.img,
                 borderRadius: 0,
+                height: 300,
+                width: double.infinity,
               ),
               Positioned(
                 top: 0,
@@ -44,35 +53,39 @@ class _ProductDetailState extends State<ProductDetail> {
                   showBackArrow: true,
                   actions: [
                     CircleIcon(
-                      icon: Iconsax.heart,
+                      icon: isWishlisted ? Iconsax.heart5 : Iconsax.heart,
                       color: Colors.red,
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          homeController.toggleWishlist(widget.item);
+                        });
+                      },
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          // Title and Price Section
+          // Product Details
           Expanded(
             child: Padding(
-              padding: EdgeInsets.all(AppSizes.defaultSpace),
+              padding: const EdgeInsets.all(AppSizes.defaultSpace),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Product Title
+                  // Product Name
                   Text(
-                    'Strawberry Mojito',
+                    widget.item.name,
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: AppSizes.spaceBtwItems / 2),
-                  // Price
+                  // Product Price
                   Text(
-                    'Rp. 55.000',
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    'Rp. ${widget.item.price}',
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: AppSizes.spaceBtwSections),
-
+                  // Toggle between Description and Reviews
                   Row(
                     children: [
                       SelectableButton(
@@ -80,8 +93,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         isSelected: isDescriptionSelected,
                         onPressed: () {
                           setState(() {
-                            isDescriptionSelected =
-                                true; // Set Description tab selected
+                            isDescriptionSelected = true;
                           });
                         },
                       ),
@@ -91,33 +103,42 @@ class _ProductDetailState extends State<ProductDetail> {
                         isSelected: !isDescriptionSelected,
                         onPressed: () {
                           setState(() {
-                            isDescriptionSelected =
-                                false; // Set Reviews tab selected
+                            isDescriptionSelected = false;
                           });
                         },
                       ),
                     ],
                   ),
                   const SizedBox(height: AppSizes.spaceBtwSections),
-
-                  // Product Description or Reviews
+                  // Description or Reviews Content
                   Expanded(
                     child: SingleChildScrollView(
                       child: ProductDescriptionOrReviews(
                         isDescriptionSelected: isDescriptionSelected,
-                        text:
-                            'The Strawberry Mojito is made with fresh strawberries, mint leaves, lime juice, white rum, simple syrup, and soda water, all mixed together to create a refreshing, fruity, and bubbly cocktail with a hint of sweetness and a burst of citrus.',
+                        text: isDescriptionSelected
+                            ? (widget.item.description?.isNotEmpty ?? false
+                                ? widget.item.description!
+                                : 'No description available')
+                            : 'No reviews available',
                       ),
                     ),
                   ),
                   const SizedBox(height: AppSizes.spaceBtwSections),
-
                   // Add to Cart Button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text('Add to Cart'),
+                      onPressed: () {
+                        cartController.addToCart(widget.item);
+                        Get.snackbar(
+                          'Success',
+                          '${widget.item.name} has been added to your cart.',
+                          snackPosition: SnackPosition.BOTTOM,
+                          backgroundColor: Colors.green.withOpacity(0.8),
+                          colorText: Colors.white,
+                        );
+                      },
+                      child: const Text('Add to Cart'),
                     ),
                   ),
                 ],

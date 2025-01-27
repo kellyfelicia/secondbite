@@ -5,7 +5,6 @@ import 'package:project_secondbite/features/core/controller/home_controller.dart
 import 'package:project_secondbite/general/widgets/custom_shape/circular_container.dart';
 import 'package:project_secondbite/general/widgets/custom_shape/rounded_image.dart';
 import 'package:project_secondbite/utils/constants/colors.dart';
-import 'package:project_secondbite/utils/constants/images_icon.dart';
 import 'package:project_secondbite/utils/constants/sizes.dart';
 
 class PromoBanner extends StatelessWidget {

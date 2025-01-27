@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_secondbite/features/authentication/controller_onboarding/onboarding_controller.dart';
+import 'package:project_secondbite/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:project_secondbite/utils/constants/images_icon.dart';
 import 'package:project_secondbite/utils/constants/texts.dart';
 import 'package:project_secondbite/features/authentication/screen/onboarding/widgets/onboarding_dot.dart';

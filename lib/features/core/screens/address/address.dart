@@ -15,8 +15,8 @@ class UserAddressPage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
           backgroundColor: AppColors.primaryColor,
-          onPressed: () => Get.to(() => AddNewAddress()),
-          child: Icon(
+          onPressed: () => Get.to(() => const AddNewAddress()),
+          child: const Icon(
             Iconsax.add,
             color: AppColors.white,
           )),

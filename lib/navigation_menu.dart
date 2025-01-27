@@ -55,7 +55,7 @@ class NavigationMenu extends StatelessWidget {
     final isSelected = controller.selectedIndex.value == index;
     return NavigationDestination(
       icon: Padding(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         child: Icon(
           icon,
           size: isSelected ? 22 : 25,

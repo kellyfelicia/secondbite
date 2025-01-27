@@ -24,7 +24,7 @@ class ProductDetail extends StatelessWidget {
           Stack(
             children: [
               // Product image
-              RoundedImage(
+              const RoundedImage(
                 imageUrl: IconImages.productImage1,
                 borderRadius: 0,
               ),
@@ -48,7 +48,7 @@ class ProductDetail extends StatelessWidget {
           // Title and Price Section
           Expanded(
             child: Padding(
-              padding: EdgeInsets.all(AppSizes.defaultSpace),
+              padding: const EdgeInsets.all(AppSizes.defaultSpace),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -86,7 +86,7 @@ class ProductDetail extends StatelessWidget {
                     child: SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {}, child: Text('Add to Cart')),
+                          onPressed: () {}, child: const Text('Add to Cart')),
                     ),
                   )
                 ],

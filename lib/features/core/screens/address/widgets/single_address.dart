@@ -15,14 +15,14 @@ class SingleAddress extends StatelessWidget {
     final dark = AppHelperFunctions.isDarkMode(context);
 
     return RoundedContainer(
-      padding: EdgeInsets.all(AppSizes.md),
+      padding: const EdgeInsets.all(AppSizes.md),
       width: double.infinity,
       showBorder: true,
       backgroundColor: selectedAddress
           ? AppColors.primaryColor.withOpacity(0.6)
           : Colors.transparent,
       borderColor: selectedAddress ? Colors.transparent : AppColors.grey,
-      margin: EdgeInsets.only(bottom: AppSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: AppSizes.spaceBtwItems),
       child: Stack(
         children: [
           Positioned(
@@ -45,8 +45,8 @@ class SingleAddress extends StatelessWidget {
               const SizedBox(height: AppSizes.sm / 2),
               const Text('(+62) 895 6262',
                   maxLines: 1, overflow: TextOverflow.ellipsis),
-              SizedBox(height: AppSizes.sm / 2),
-              Text(
+              const SizedBox(height: AppSizes.sm / 2),
+              const Text(
                 'Jalan Kakek Kamu, Krukut, Taman Sari, Jakarta Barat, DKI Jakarta',
                 softWrap: true,
               )
